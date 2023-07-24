@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pepsi</title>
+</head>
+<body>
+  <section class="sec">
+    <header>
+      <a href="#"><img src="logo.png" alt="Pepsi Logo" class="logo"></a>
+      <div class="togglemenu" onclick="menuToggle();"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textbox">
+        <h2>That's What<br><span>I Like</span></h2>
+        <p>
+          Pepsi has introduced the new tagline “That's What I Like” for its Pepsi, Pepsi Zero Sugar, and Diet Pepsi beverages across the United States.
+          Pepsi has a slight citrusy tang that makes it taste crisp and delicious. The cans and bottles of Pepsi our team popped open also seemed to be just a smidge more bubbly than its competition—and that carbonation counts.
+        </p>
+        <a href="#">View All Products</a>
+      </div>
+      <div class="imagebox">
+        <img src="pepsi001.png" alt="Pepsi blue kan" class="pepsi">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="pepsi001.png" alt="pepsi blue can"   onclick="imgSlider('pepsi001.png');changeBgColor('#0062be')"></li>
+      <li><img src="pepsi002.png" alt="pepsi silver can" onclick="imgSlider('pepsi002.png');changeBgColor('#e60c2c')"></li>
+      <li><img src="pepsi003.png" alt="Pepsi black can"  onclick="imgSlider('pepsi003.png');changeBgColor('#1e1e1e')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="facebook.png" alt="facebook icon"></a></li>
+      <li><a href="#"><img src="instagram.png" alt="instagram icon"></a></li>
+      <li><a href="#"><img src="twitter.png" alt="twitter icon"></a></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+    // Function to change the image of pepsi in the content field
+    function imgSlider(imageSource)
+    {
+      document.querySelector('.pepsi').src = imageSource;
+    }
+
+    // Function to change the background color when click on the thumb
+    function changeBgColor(color)
+    {
+      const sec = document.querySelector('.sec');
+      sec.style.background = color;
+    }
+
+    // Function to activiate the toggle menu when click on it 
+    function menuToggle()
+    {
+      // To add active class to the toggle menu and disply the icons
+      const toggleMenu = document.querySelector('.togglemenu');
+      toggleMenu.classList.toggle('active');
+
+      // To add active class to the ul and disply the li elements.
+      const navigation = document.querySelector('.navigation');
+      navigation.classList.toggle('active');
+    }
+
+  </script>
+</body>
+</html>

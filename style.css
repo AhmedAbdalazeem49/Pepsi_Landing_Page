@@ -1,0 +1,298 @@
+/* Global Style */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Section Style */
+section
+{
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#0062be;
+  transition: 0.5s;
+}
+
+/* Header Style */
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Style */
+header .logo
+{
+  position: relative;
+  max-width: 80px;
+}
+
+/* Ul links Style */
+header ul
+{
+  position: relative;
+  display: flex;
+}
+
+header ul li 
+{
+  list-style: none;
+}
+
+header ul li a 
+{
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 40px;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Content Style */
+.content
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TextBox Style */
+.content .textbox
+{
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textbox h2
+{
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+.content .textbox h2 span 
+{
+  font-size: 2em;
+}
+
+.content .textbox p
+{
+  color: #fff;
+}
+
+.content .textbox a
+{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #fff;
+  color: #111;
+  border-radius: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* ImageBox Style */
+.content .imagebox
+{
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content .imagebox img
+{
+  max-width: 260px;
+}
+
+/* Thumb Style */
+.thumb
+{
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.thumb li
+{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover
+{
+  transform: translateY(-15px) scale(1.2);
+}
+
+.thumb li img
+{
+  max-width: 40px;
+}
+
+/* Social Media Icons Style */
+ul.sci
+{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul.sci li
+{
+  list-style-type: none;
+}
+
+ul.sci li a 
+{
+  display: inline-block;
+  filter: invert(1);
+  margin: 5px 0;
+  transform: scale(.6);
+}
+
+/* Responsive the website  */
+@media (max-width:991px)
+{
+  section
+  {
+    padding: 40px;
+    padding-bottom: 140px;
+  }
+  header
+  {
+    padding: 20px 40px;
+  }
+  header .logo
+  {
+    max-width: 60px;
+  }
+  header ul
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header ul.active
+  {
+    visibility: visible;
+    opacity: 1;
+  }
+  header ul li a
+  {
+    display: inline-block;
+    color: #111;
+    font-weight: 400;
+    font-size: 2em;
+    margin: 10px 0px;
+  }
+  header ul li a:hover
+  {
+    color: #ed0223;
+  }
+  /* Toggle Menu Style */
+  .togglemenu
+  {
+    position:relative;
+    width: 40px;
+    height: 40px;
+    background: url(menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .togglemenu.active
+  {
+    background: url(close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+  .content
+  {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .content .textbox
+  {
+    position: relative;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+  .content .textbox h2 
+  {
+    font-size: 3em;
+  }
+  .content .textbox a 
+  {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .content .imagebox
+  {
+    width: 100%;
+    padding-right:0 ;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .content .imagebox img 
+  {
+    max-width: 150px;
+  }
+  .thumb li img 
+  {
+    max-width: 30px;
+  }
+  ul.sci
+  {
+    right: 0;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* The end of style */
